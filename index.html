@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A lightweight single-page application demo for discovering books, managing a reading list, and viewing a dashboard.">
+  <title>PageTurn — Reading Space</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#/home" aria-label="PageTurn home"><span class="brand-icon" aria-hidden="true">P</span> PageTurn<span class="brand-dot">.</span></a>
+    <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Open navigation">☰</button>
+    <nav id="mainNav" class="nav" aria-label="Main navigation">
+      <a href="#/home" data-route="home">Home</a>
+      <a href="#/discover" data-route="discover">Discover</a>
+      <a href="#/library" data-route="library">My Library <span id="libraryBadge" class="badge">0</span></a>
+      <a href="#/about" data-route="about">About</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">◐ Theme</button>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <div class="loading"><span class="loader" aria-hidden="true"></span><p>Preparing your reading space…</p></div>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#/home"><span class="brand-icon" aria-hidden="true">P</span> PageTurn<span class="brand-dot">.</span></a>
+    <p>A little space for your next great read.</p>
+    <span>Built with HTML, CSS & JavaScript</span>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
